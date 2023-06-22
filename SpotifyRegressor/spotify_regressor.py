@@ -58,13 +58,13 @@ prediction = model.predict([x_test[index]])[0]
 print(f"Model's Prediction on a Sample Input: {prediction}")
 print(f"Actual Label on the Same Input: {y_test[index]}\n")
 
-# Calculate model's approximate deviation on test data
+# Function to calculate model's approximate deviation on datasets
 def dev_calc(x, y):
   deviation = []
   for val in range(len(x)): # Loop through test values and have model predict on those test values
     error_val = abs(model.predict([x[val]]) - y[val])[0] # Determine the difference between the model's predicted labels and actual labels
     deviation.append(float(error_val)) # Store difference values in a list for plotting
-  average_deviation = sum(deviation) / len(deviation)
+  average_deviation = sum(deviation) / len(deviation) # Average deviation over the set
   return deviation, average_deviation
 
 # Visualize deviation on test data
