@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load dataset
-df = pd.read_csv('SpotifyTop50.csv')
+df = pd.read_csv('spotify50.csv')
 df = pd.DataFrame(df)
 
 # Remove unnecessary columns from the dataset
