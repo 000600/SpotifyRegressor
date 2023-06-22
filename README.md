@@ -4,8 +4,13 @@ The XGBoost Regressor in this project predicts the popularity rating of a top 50
 
 ## The Dataset
 The dataset can be found at this link: https://www.kaggle.com/datasets/leonardopena/top50spotify2019. Credit for the dataset collection goes to **Deepak Depu**, **Arpita Gupta**, **Taner Sekmen**, and others on *Kaggle*. It includes multiple aspects of the top 50 songs on Spotify (in 2019), including:
+- Artist's name
+- Valence
+- Liveliness
+- Popularity
+- Acousticness
 
-It should be noted that some values are marked as *NA* in the initial dataset in the *age* and *foot length* columns. In this program, these missing values are filled in with the mean of their respective columns; a missing value in the age column would be filled in with the mean of all other age values in the dataset. It should also be noted that all x-values (input values) were scaled with Scikit-Learn's **StandardScaler** before being fed to any of the models (both the neural networks and the XGBoost Regressor) during preprocessing.
+It should be noted that the Pandas library couldn't read the data file in its original format due to special charactes included in some of the names of the songs. To account for this issue, I altered the dataset slightly and replaced special characters with non-special equivalents (this change didn't impact the model because song titles were not included in the training set). As a result, the CSV included in this repository is slightly different from the one that can be found at the link above. It should also be noted that all x-values (input values) were scaled with Scikit-Learn's **StandardScaler** before being fed to the regressor as part of data preprocessing.
 
 ## Libraries
 These neural networks and XGBoost Regressor were created with the help of the Tensorflow, Scikit-Learn, and XGBoost libraries.
