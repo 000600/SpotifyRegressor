@@ -13,7 +13,7 @@ df = pd.read_csv('SpotifyTop50.csv')
 df = pd.DataFrame(df)
 
 # Remove unnecessary columns from the dataset
-df = df.drop(labels = ["TrackName"], axis = 1) # These columns will not assist the model in learning how to predict the total length of a possum
+df = df.drop(labels = ["TrackName"], axis = 1) # The title of the track will not assist the model in learning how to predict popularity of a song
 
 # Map non numeric values
 genre_map = list(set([i for i in df.Genre]))
