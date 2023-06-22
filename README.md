@@ -1,5 +1,5 @@
 # Spotify Regressor
-## XGBoost Regressor
+## The XGBoost Regressor
 The XGBoost Regressor in this project predicts the popularity rating of a top 50 Spotify song (rankings were collected in 2019) based on a variety of factors. The model has 5000 estimators, a learning rate of 0.001, and early stopping based on the test sets. Included in the **spotify_regressor.py** file is the model, along with graphs of its "deviation" from actual popularity ratings given both the training and test set. As used in this project, "deviation" simply refers to how far the regressor was from the actual popularity value; if the popularity value for a song was 91 and the model predicted a popularity value of 88, the deviation would equal three. A mean squared error assessment is also included in the file.
 
 ## The Dataset
